@@ -536,7 +536,9 @@ body.menu-open .nav__mobile {
   z-index: 1;
   width: 100%;
   max-width: 640px;
-  padding: 110px 0 100px;
+  margin: 0;
+  padding-top: 110px;
+  padding-bottom: 100px;
   transform: translateY(-80px);
 }
 
@@ -1524,6 +1526,7 @@ body.menu-open .nav__mobile {
 /* ---- Legal (Terms & Conditions, etc.) ---- */
 .legal {
   max-width: 780px;
+  margin: 0;
 }
 
 .legal .legal-updated {
@@ -1575,7 +1578,7 @@ body.menu-open .nav__mobile {
 @media (max-width: 980px) {
   .hero-frame { margin: 12px; border-radius: 10px; }
   .hero.hero--photo { min-height: 620px; }
-  .hero__content { padding: 100px 0 150px; }
+  .hero__content { padding-top: 100px; padding-bottom: 150px; }
   .hero__carousel { right: 20px; bottom: 24px; }
   .hero__thumb { width: 48px; height: 48px; }
   .grid--4 { grid-template-columns: repeat(2, 1fr); }
