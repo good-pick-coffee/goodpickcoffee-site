@@ -24,6 +24,11 @@
   --mustard: #dba526;
   --mustard-deep: #b8871c;
   --mustard-soft: rgba(219, 165, 38, 0.14);
+
+  /* Single shared horizontal inset used by the header nav, hero content,
+     and hero carousel so the logo, H1, CTAs, and carousel preview #4 all
+     sit on the same left/right gutter at every viewport width. */
+  --hero-gutter: clamp(32px, 4vw, 64px);
 }
 
 * {
@@ -82,13 +87,13 @@ ul {
 .container {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding-inline: clamp(32px, 4vw, 64px);
+  padding-inline: var(--hero-gutter);
   box-sizing: border-box;
 }
 
 @media (max-width: 720px) {
-  .container {
-    padding-inline: 24px;
+  :root {
+    --hero-gutter: 24px;
   }
 }
 
@@ -265,7 +270,7 @@ ul {
   border-radius: 10px;
 }
 
-@media (max-width: 1480px) {
+@media (max-width: 900px) {
   .header-frame {
     padding: 10px;
   }
@@ -295,7 +300,17 @@ ul {
   border-radius: 0;
 }
 
-@media (max-width: 1480px) {
+/* On the home hero, the header floats directly over the photo instead of
+   sitting in the centered site .container. Un-center it and give it the
+   same --hero-gutter padding as .hero__content and .hero__carousel so the
+   logo/H1 share one left edge and the CTA/toggle/carousel #4 share one
+   right edge, at every width. */
+.hero-frame .nav.container {
+  max-width: none;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
   .hero-frame .site-header {
     position: relative;
     background: var(--olive);
@@ -327,7 +342,9 @@ ul {
 .nav__logo img {
   height: 44px;
   width: auto;
+  max-width: none;
   flex-shrink: 0;
+  object-fit: contain;
   position: relative;
   top: 5px;
   filter: brightness(0) invert(1);
@@ -605,7 +622,7 @@ body.menu-open .nav__mobile {
 .hero__carousel {
   position: absolute;
   z-index: 2;
-  right: 40px;
+  right: var(--hero-gutter);
   bottom: 36px;
   display: flex;
   gap: 10px;
@@ -1569,8 +1586,26 @@ body.menu-open .nav__mobile {
   margin: 36px 0;
 }
 
-/* ---- Responsive ---- */
-@media (max-width: 1480px) {
+/* ---- Responsive ----
+   The desktop nav should stay active through medium/narrow desktop
+   widths. Instead of collapsing to the hamburger as soon as the nav
+   feels tight, tighten the gaps/type size in two steps first, and only
+   drop to the green hamburger header once there's genuinely not
+   enough room (below 900px). */
+@media (max-width: 1220px) {
+  .nav { gap: 14px; }
+  .nav__links { gap: 20px; }
+  .nav__links a, .nav__dropdown-toggle { font-size: 14px; }
+  .nav__actions { gap: 12px; }
+}
+
+@media (max-width: 1040px) {
+  .nav__links { gap: 8px; }
+  .nav__phone { display: none; }
+  .nav__actions .btn { padding: 9px 16px; font-size: 11px; }
+}
+
+@media (max-width: 900px) {
   .nav__links, .nav__actions .btn, .nav__phone { display: none; }
   .nav__toggle { display: flex; }
 }
@@ -1579,7 +1614,7 @@ body.menu-open .nav__mobile {
   .hero-frame { margin: 12px; border-radius: 10px; }
   .hero.hero--photo { min-height: 620px; }
   .hero__content { padding-top: 100px; padding-bottom: 150px; }
-  .hero__carousel { right: 20px; bottom: 24px; }
+  .hero__carousel { bottom: 24px; }
   .hero__thumb { width: 48px; height: 48px; }
   .grid--4 { grid-template-columns: repeat(2, 1fr); }
   .grid--3 { grid-template-columns: repeat(2, 1fr); }
