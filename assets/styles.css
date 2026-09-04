@@ -555,6 +555,11 @@ body.menu-open .nav__mobile {
   width: 100%;
   max-width: 640px;
   margin: 0;
+  /* Shifts the whole copy group (eyebrow/H1/paragraph/CTAs/rating) right of
+     the shared --hero-gutter as one block, composed further into the hero
+     like a wide editorial hero. Logo/header, carousel, and breakpoints are
+     untouched — only this wrapper's own inset changes. */
+  margin-left: clamp(40px, 5vw, 90px);
   padding-top: 110px;
   padding-bottom: 100px;
   transform: translateY(-80px);
