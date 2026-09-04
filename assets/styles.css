@@ -261,7 +261,7 @@ ul {
   top: 0;
   z-index: 100;
   background: var(--olive);
-  padding: 16px;
+  padding: 18px;
 }
 
 .site-header {
@@ -276,6 +276,10 @@ ul {
   }
   .site-header {
     border-radius: 8px;
+  }
+  .hero-frame {
+    margin: 10px;
+    border-radius: 10px;
   }
 }
 
@@ -300,12 +304,12 @@ ul {
   border-radius: 0;
 }
 
-/* On the home hero, the header floats directly over the photo instead of
-   sitting in the centered site .container. Un-center it and give it the
-   same --hero-gutter padding as .hero__content and .hero__carousel so the
-   logo/H1 share one left edge and the CTA/toggle/carousel #4 share one
-   right edge, at every width. */
-.hero-frame .nav.container {
+/* The nav (logo, links, CTA/hamburger) is un-centered site-wide so the
+   header sits at the exact same --hero-gutter inset from its frame edge
+   on every page — home (hero-frame) and interior pages (header-frame)
+   alike. This also keeps the home logo/H1 sharing one left edge and the
+   CTA/toggle/carousel #4 sharing one right edge, at every width. */
+.nav.container {
   max-width: none;
   margin: 0;
 }
@@ -559,7 +563,7 @@ body.menu-open .nav__mobile {
      the shared --hero-gutter as one block, composed further into the hero
      like a wide editorial hero. Logo/header, carousel, and breakpoints are
      untouched — only this wrapper's own inset changes. */
-  margin-left: clamp(40px, 5vw, 90px);
+  margin-left: clamp(40px, 8vw, 140px);
   padding-top: 110px;
   padding-bottom: 100px;
   transform: translateY(-80px);
@@ -1617,7 +1621,6 @@ body.menu-open .nav__mobile {
 }
 
 @media (max-width: 980px) {
-  .hero-frame { margin: 12px; border-radius: 10px; }
   .hero.hero--photo { min-height: 620px; }
   .hero__content { padding-top: 100px; padding-bottom: 150px; }
   .hero__carousel { bottom: 24px; }
