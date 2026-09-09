@@ -67,13 +67,24 @@ document.addEventListener("DOMContentLoaded", function () {
     var activeIndex = 0;
     var rotateTimer = null;
 
+    function isMobileHero() {
+      return window.matchMedia("(max-width: 720px)").matches;
+    }
+
+    function getPos(thumb) {
+      if (isMobileHero()) {
+        return thumb.getAttribute("data-pos-mobile") || thumb.getAttribute("data-pos") || "center center";
+      }
+      return thumb.getAttribute("data-pos") || "center center";
+    }
+
     function setActive(index) {
       activeIndex = index;
       thumbs.forEach(function (t, i) {
         t.classList.toggle("active", i === index);
       });
       var img = thumbs[index].getAttribute("data-img");
-      var pos = thumbs[index].getAttribute("data-pos") || "center center";
+      var pos = getPos(thumbs[index]);
       if (img) {
         heroMediaImg.style.opacity = "0";
         setTimeout(function () {
@@ -97,6 +108,10 @@ document.addEventListener("DOMContentLoaded", function () {
         startRotation();
       });
     });
+
+    if (thumbs.length) {
+      heroMediaImg.style.objectPosition = getPos(thumbs[activeIndex]);
+    }
 
     startRotation();
   }
