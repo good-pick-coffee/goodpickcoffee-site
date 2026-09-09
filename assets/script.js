@@ -16,6 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Mobile nav collapsible groups (Services, Locations)
+  document.querySelectorAll(".nav__mobile-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var group = btn.closest(".nav__mobile-group");
+      if (group) group.classList.toggle("is-open");
+    });
+  });
+
   // Nav dropdowns (desktop nav) — Services, Locations, etc.
   var dropdowns = Array.prototype.slice.call(document.querySelectorAll(".nav__dropdown"));
   if (dropdowns.length) {
