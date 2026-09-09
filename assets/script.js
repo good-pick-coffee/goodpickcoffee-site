@@ -71,9 +71,18 @@ document.addEventListener("DOMContentLoaded", function () {
       return window.matchMedia("(max-width: 720px)").matches;
     }
 
+    // On mobile, use each photo's dedicated pre-cropped mobile image
+    // (data-img-mobile) when present, falling back to the desktop photo.
+    function getImg(thumb) {
+      if (isMobileHero()) {
+        return thumb.getAttribute("data-img-mobile") || thumb.getAttribute("data-img");
+      }
+      return thumb.getAttribute("data-img");
+    }
+
     function getPos(thumb) {
       if (isMobileHero()) {
-        return thumb.getAttribute("data-pos-mobile") || thumb.getAttribute("data-pos") || "center center";
+        return thumb.getAttribute("data-pos-mobile") || "center center";
       }
       return thumb.getAttribute("data-pos") || "center center";
     }
@@ -83,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       thumbs.forEach(function (t, i) {
         t.classList.toggle("active", i === index);
       });
-      var img = thumbs[index].getAttribute("data-img");
+      var img = getImg(thumbs[index]);
       var pos = getPos(thumbs[index]);
       if (img) {
         heroMediaImg.style.opacity = "0";
@@ -110,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     if (thumbs.length) {
+      heroMediaImg.src = getImg(thumbs[activeIndex]);
       heroMediaImg.style.objectPosition = getPos(thumbs[activeIndex]);
     }
 

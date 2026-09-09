@@ -1689,8 +1689,9 @@ body.menu-open .nav__mobile {
   .section { padding: 64px 0; }
   .price-card--featured { order: -1; }
 
-  /* Stacked mobile hero: fixed-height photo strip on top, dot indicators,
-     then all copy/CTAs below on solid ground (no overlay, no overlap). */
+  /* Stacked mobile hero: fixed-height photo strip on top, dot indicators
+     (using dedicated pre-cropped mobile images), then all copy/CTAs below
+     on solid ground (no overlay, no overlap). */
   .hero.hero--photo {
     display: flex;
     flex-direction: column;
@@ -1703,6 +1704,7 @@ body.menu-open .nav__mobile {
     order: 1;
     height: clamp(220px, 42vh, 320px);
     flex-shrink: 0;
+    overflow: hidden;
   }
   .hero__scrim { display: none; }
   .hero__carousel {
