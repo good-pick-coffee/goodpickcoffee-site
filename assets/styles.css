@@ -618,12 +618,12 @@ body.menu-open .nav__mobile {
 
 .hero h1 {
   font-size: clamp(31px, 4.4vw, 46px);
-  color: #F7F4E2;
+  color: #f8f8f8;
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
 }
 
 .hero h1 .accent {
-  color: #F7F4E2;
+  color: #f8f8f8;
 }
 
 .hero h1 .location {
