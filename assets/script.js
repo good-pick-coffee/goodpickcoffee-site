@@ -104,10 +104,19 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
+    function nextIndex(from) {
+      var next = (from + 1) % thumbs.length;
+      // Mobile: slide 3 (data-num 03) is skipped entirely in rotation.
+      if (isMobileHero() && thumbs[next].getAttribute("data-num") === "03") {
+        next = (next + 1) % thumbs.length;
+      }
+      return next;
+    }
+
     function startRotation() {
       if (rotateTimer) clearInterval(rotateTimer);
       rotateTimer = setInterval(function () {
-        setActive((activeIndex + 1) % thumbs.length);
+        setActive(nextIndex(activeIndex));
       }, 4500);
     }
 
