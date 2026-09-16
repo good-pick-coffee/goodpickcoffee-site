@@ -165,25 +165,29 @@ ul {
 
 /* Photo-background section (e.g. Scale Your Coffee Experience): full-bleed
    image with a dark scrim between the photo and the copy/cards, same
-   pattern as the hero. Cards stay opaque white so their own text is
-   unaffected; only the section-head copy needs a light color override. */
+   pattern as the hero. Color overrides are scoped to .section-head only
+   (not the whole section) so the opaque white cards keep their normal
+   dark text untouched. */
 .section--photo {
   position: relative;
   overflow: hidden;
-  color: var(--white);
 }
 
 .section--photo .section-media {
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
 }
 
 .section--photo .section-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   display: block;
+  transform: scale(1.4);
+  transform-origin: center center;
 }
 
 .section--photo .section-scrim {
@@ -197,12 +201,16 @@ ul {
   z-index: 1;
 }
 
-.section--photo .eyebrow {
+.section--photo .section-head .eyebrow {
   color: var(--white);
 }
 
-.section--photo .eyebrow::before {
+.section--photo .section-head .eyebrow::before {
   background: var(--white);
+}
+
+.section--photo .section-head h2 {
+  color: var(--white);
 }
 
 .section--photo .section-head p {
