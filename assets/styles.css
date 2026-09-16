@@ -186,12 +186,14 @@ ul {
   object-fit: cover;
   object-position: center center;
   display: block;
+  transform: scale(1.25);
+  transform-origin: center center;
 }
 
 .section--photo .section-scrim {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.62);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .section--photo .container {
