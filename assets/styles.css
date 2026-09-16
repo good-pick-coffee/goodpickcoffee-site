@@ -186,8 +186,6 @@ ul {
   object-fit: cover;
   object-position: center center;
   display: block;
-  transform: scale(1.4);
-  transform-origin: center center;
 }
 
 .section--photo .section-scrim {
@@ -651,7 +649,7 @@ body.menu-open .nav__mobile {
 .hero__scrim {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.22);
 }
 
 .hero__content {
