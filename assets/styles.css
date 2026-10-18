@@ -1783,8 +1783,8 @@ body.menu-open .nav__mobile {
   .hero__thumb img,
   .hero__thumb-num,
   .hero__thumb-bar { display: none; }
-  /* Mobile-only: slide 3 is skipped entirely (no dot, no rotation stop) */
-  .hero__carousel .hero__thumb[data-num="03"] { display: none; }
+  /* Mobile-only: slide 4 is skipped entirely (no dot, no rotation stop) */
+  .hero__carousel .hero__thumb[data-num="04"] { display: none; }
   .hero__content {
     order: 3;
     position: relative;

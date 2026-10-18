@@ -106,8 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function nextIndex(from) {
       var next = (from + 1) % thumbs.length;
-      // Mobile: slide 3 (data-num 03) is skipped entirely in rotation.
-      if (isMobileHero() && thumbs[next].getAttribute("data-num") === "03") {
+      // Mobile: slide 4 (data-num 04) is skipped entirely in rotation.
+      if (isMobileHero() && thumbs[next].getAttribute("data-num") === "04") {
         next = (next + 1) % thumbs.length;
       }
       return next;
