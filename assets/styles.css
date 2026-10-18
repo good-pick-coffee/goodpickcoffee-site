@@ -1797,3 +1797,6 @@ body.menu-open .nav__mobile {
   }
   .hero p.lead { max-width: none; }
 }
+
+a.hero__rating { display: inline-flex; color: inherit; text-decoration: none; }
+a.hero__rating:hover, a.hero__rating:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
