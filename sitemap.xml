@@ -2,92 +2,116 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://goodpickcoffee.com/</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/pricing.html</loc>
+    <loc>https://goodpickcoffee.com/pricing</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/menu.html</loc>
+    <loc>https://goodpickcoffee.com/menu</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/brand-activations.html</loc>
+    <loc>https://goodpickcoffee.com/about</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/corporate-catering.html</loc>
+    <loc>https://goodpickcoffee.com/contact</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/sport-events.html</loc>
+    <loc>https://goodpickcoffee.com/careers</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/holiday-parties.html</loc>
+    <loc>https://goodpickcoffee.com/terms</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/matcha-catering.html</loc>
+    <loc>https://goodpickcoffee.com/gallery</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/gesha-tasting.html</loc>
+    <loc>https://goodpickcoffee.com/corporate-coffee-catering</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/film-production-sets.html</loc>
+    <loc>https://goodpickcoffee.com/brand-activation-coffee-cart</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/los-angeles.html</loc>
+    <loc>https://goodpickcoffee.com/film-set-coffee-cart</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/malibu.html</loc>
+    <loc>https://goodpickcoffee.com/sports-event-coffee-cart</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/the-valley.html</loc>
+    <loc>https://goodpickcoffee.com/holiday-party-coffee-catering</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/orange-county.html</loc>
+    <loc>https://goodpickcoffee.com/matcha-cart-catering</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/about.html</loc>
+    <loc>https://goodpickcoffee.com/gesha-tasting</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/contact.html</loc>
+    <loc>https://goodpickcoffee.com/los-angeles-coffee-catering</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/careers.html</loc>
+    <loc>https://goodpickcoffee.com/malibu-coffee-catering</loc>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://goodpickcoffee.com/terms.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://goodpickcoffee.com/san-fernando-valley-coffee-catering</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://goodpickcoffee.com/orange-county-coffee-catering</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
