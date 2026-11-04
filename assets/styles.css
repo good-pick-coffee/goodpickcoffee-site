@@ -1803,7 +1803,7 @@ a.hero__rating:hover, a.hero__rating:focus-visible { text-decoration: underline;
 
 /* Reviews */
 .reviews { background: var(--cream); }
-.reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+.reviews__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; align-items: stretch; }
 .reviews__stack { display: flex; flex-direction: column; gap: 16px; }
 .reviews__stack .review-card { flex: 1; padding: 20px 24px; }
 .reviews__stack .review-card blockquote { margin-bottom: 14px; }
